@@ -205,7 +205,7 @@ export default function LandConnectednessPage() {
         {/* JOURNAL */}
         <JournalSection
           title="Journal Reflection"
-          text="The trail is a place of discovery and connection. As I walked, I felt a sense of calm and presence, surrounded by the sights, sounds, and smells of nature. The rain added a layer of intimacy and coziness to the experience, making me feel like I was in a secret world. I noticed the trees standing tall and strong, the birds singing and flying around, and the small details of plants and leaves. The trail allowed me to enter the land and connect with its beauty and complexity."
+          text="While walking on the trail, I felt a deep sense of connection and awe towards the land. The rain added a layer of intimacy and coziness to the experience, making me feel like I was part of the natural world. I noticed the small details, like the sound of birds and the smell of wet earth, which made me appreciate the richness and beauty of nature. The trees stood as silent witnesses to the passage of time, while the birds brought life and movement to the place. The plants added color and texture, showing me the diversity and resilience of life in nature. Overall, this visit allowed me to slow down, pay attention, and connect with the land in a meaningful way."
         />
 
         {/* PROCESS NOTE */}
