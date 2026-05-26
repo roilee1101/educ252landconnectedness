@@ -1,65 +1,175 @@
-import Image from "next/image";
-
-export default function Home() {
+export default function LandConnectednessPage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-stone-100 text-stone-900">
+      {/* HERO SECTION */}
+      <section className="bg-stone-900 px-6 py-20 text-white">
+        <div className="mx-auto max-w-5xl">
+          <p className="mb-3 text-sm uppercase tracking-[0.3em] text-stone-300">
+            Digital Journal
+          </p>
+
+          <h1 className="text-4xl font-bold md:text-6xl">
+            Land Connectedness
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-300">
+            A photo and journal-based reflection on my visits to a place,
+            focusing on attention, memory, observation, and relationship with
+            the land.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* INTRODUCTION */}
+      <section className="mx-auto max-w-5xl px-6 py-12">
+        <div className="rounded-2xl bg-white p-8 shadow-sm">
+          <h2 className="text-2xl font-semibold">Project Introduction</h2>
+
+          <p className="mt-4 leading-8 text-stone-700">
+            Write a short introduction here. Explain where you went, why you
+            chose this place, and what you hoped to notice or learn through your
+            visits.
+          </p>
         </div>
-      </main>
+      </section>
+
+      {/* VISIT ONE */}
+      <section className="mx-auto max-w-5xl px-6 py-12">
+        <div className="mb-8">
+          <p className="text-sm uppercase tracking-[0.25em] text-stone-500">
+            Visit One
+          </p>
+          <h2 className="mt-2 text-3xl font-bold">First Visit Title</h2>
+          <p className="mt-2 text-stone-600">Date / Location / Weather</p>
+        </div>
+
+        {/* PHOTO GALLERY */}
+        <div className="grid gap-6 md:grid-cols-3">
+          <PhotoCard
+            image="/images/visit1-photo1.jpg"
+            title="Photo One"
+            caption="Write a short caption for this photo."
+          />
+          <PhotoCard
+            image="/images/visit1-photo2.jpg"
+            title="Photo Two"
+            caption="Write a short caption for this photo."
+          />
+          <PhotoCard
+            image="/images/visit1-photo3.jpg"
+            title="Photo Three"
+            caption="Write a short caption for this photo."
+          />
+        </div>
+
+        {/* JOURNAL */}
+        <JournalSection
+          title="Journal Reflection"
+          text="Write your journal entry here. Describe what you saw, heard, smelled, felt, and thought while you were in the place. Try to include both outer observations and inner feelings."
+        />
+
+        {/* PROCESS NOTE */}
+        <ProcessSection
+          title="Process Note"
+          text="Explain how you created your media response for this visit. For example, describe how you chose your photos, what you noticed while journaling, or how the place shaped your thinking."
+        />
+      </section>
+
+      {/* VISIT TWO */}
+      <section className="mx-auto max-w-5xl px-6 py-12">
+        <div className="mb-8">
+          <p className="text-sm uppercase tracking-[0.25em] text-stone-500">
+            Visit Two
+          </p>
+          <h2 className="mt-2 text-3xl font-bold">Second Visit Title</h2>
+          <p className="mt-2 text-stone-600">Date / Location / Weather</p>
+        </div>
+
+        {/* PHOTO GALLERY */}
+        <div className="grid gap-6 md:grid-cols-3">
+          <PhotoCard
+            image="/images/visit2-photo1.jpg"
+            title="Photo One"
+            caption="Write a short caption for this photo."
+          />
+          <PhotoCard
+            image="/images/visit2-photo2.jpg"
+            title="Photo Two"
+            caption="Write a short caption for this photo."
+          />
+          <PhotoCard
+            image="/images/visit2-photo3.jpg"
+            title="Photo Three"
+            caption="Write a short caption for this photo."
+          />
+        </div>
+
+        {/* JOURNAL */}
+        <JournalSection
+          title="Journal Reflection"
+          text="Write your second journal entry here. Focus on what changed from the first visit. What did you notice this time that you missed before?"
+        />
+
+        {/* PROCESS NOTE */}
+        <ProcessSection
+          title="Process Note"
+          text="Explain how your second visit felt different from the first. Describe your photo choices, writing process, and what you learned by returning to the same place."
+        />
+      </section>
+
+      {/* FINAL REFLECTION */}
+      <section className="mx-auto max-w-5xl px-6 py-12">
+        <div className="rounded-2xl bg-white p-8 shadow-sm">
+          <h2 className="text-2xl font-semibold">Final Reflection</h2>
+
+          <p className="mt-4 leading-8 text-stone-700">
+            Write your final reflection here. Explain what both visits taught
+            you about land connectedness, attention, place, and yourself.
+          </p>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+type PhotoCardProps = {
+  image: string;
+  title: string;
+  caption: string;
+};
+
+function PhotoCard({ image, title, caption }: PhotoCardProps) {
+  return (
+    <div className="overflow-hidden rounded-2xl bg-white shadow-sm">
+      <img src={image} alt={title} className="h-64 w-full object-cover" />
+
+      <div className="p-5">
+        <h3 className="text-lg font-semibold">{title}</h3>
+        <p className="mt-2 text-sm leading-6 text-stone-600">{caption}</p>
+      </div>
+    </div>
+  );
+}
+
+type TextSectionProps = {
+  title: string;
+  text: string;
+};
+
+function JournalSection({ title, text }: TextSectionProps) {
+  return (
+    <div className="mt-8 rounded-2xl bg-white p-8 shadow-sm">
+      <h3 className="text-2xl font-semibold">{title}</h3>
+      <p className="mt-4 leading-8 text-stone-700">{text}</p>
+    </div>
+  );
+}
+
+function ProcessSection({ title, text }: TextSectionProps) {
+  return (
+    <div className="mt-6 rounded-2xl bg-amber-50 p-8 shadow-sm">
+      <h3 className="text-xl font-semibold">{title}</h3>
+      <p className="mt-4 leading-8 text-stone-700">{text}</p>
     </div>
   );
 }
