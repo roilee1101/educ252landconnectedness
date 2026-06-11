@@ -120,12 +120,7 @@ p {
   line-height: 1.8;
 }
 
-/* Final reflection card */
-section:last-of-type .rounded-2xl {
-  background:
-    linear-gradient(135deg, rgba(255, 250, 242, 0.95), rgba(217, 226, 208, 0.9)) !important;
-  border: 1px solid rgba(31, 61, 43, 0.14);
-}
+
 
 /* Simple fade-in animation */
 section {

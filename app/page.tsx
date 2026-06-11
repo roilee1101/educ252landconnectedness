@@ -7,7 +7,6 @@ export default function LandConnectednessPage() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const showVisitTwo = true;
-  const showFinalReflection = true;
 
   const playAudio = (audioPath: string) => {
     if (audioRef.current) {
@@ -255,8 +254,8 @@ export default function LandConnectednessPage() {
 
           <GallerySection
             id="visit-two-gallery"
-            label="Visit Two Drawings & Writings"
-            title="Drawing the Place Slowly"
+            label="Drawings & Writings"
+            title="Illustrating the Place Slowly"
             description={
               <>
                 For my second visit, I used drawings to respond to the place
@@ -292,7 +291,7 @@ export default function LandConnectednessPage() {
               },
               {
                 image: "/images/day2-drawing3.jpg",
-                title: "In place writing",
+                title: "In-place Writing",
                 caption:
                   "On the trail, I sat down and wrote some of my thoughts and feelings about the place. I focused mainly on what I saw and heard.",
                 transcript: (
@@ -318,27 +317,13 @@ export default function LandConnectednessPage() {
 
           <JournalSection
             title="Journal Reflection"
-            text="This time, I was more focused on drawing and writing instead of photos. Drawing allowed me to take more time to look at the details and really see what the "
+            text="This time, I was more focused on drawing and writing instead of photos. Drawing allowed me to take more time to look at the details and really see what the beauty of each element is. I also wrote some of my thoughts and feelings while sitting on the trail, which helped me connect with the place in a deeper way. "
           />
 
           <ProcessSection
             title="Process Note"
-            text="Explain how you made the drawings. Describe where you sat, what you chose to draw, how long you spent observing, and why one drawing included writing. You can also explain how the transcript helps viewers understand the handwritten reflection."
+            text="Because the first one was more focused on photos, I wanted to try drawing for the second visit to experience the place more slowly and deeply. I also wanted to include some of my writing from the trail, so I added a transcript that appears when the image is clicked. By doing two separate ways to represent each of the visits, I think it made the process more challenging but also more fulfilling and fun."
           />
-        </section>
-      )}
-
-      {/* FINAL REFLECTION */}
-      {showFinalReflection && (
-        <section className="mx-auto max-w-5xl px-6 py-12">
-          <div className="rounded-2xl bg-white p-8 shadow-sm">
-            <h2 className="text-2xl font-semibold">Final Reflection</h2>
-
-            <p className="mt-4 leading-8 text-stone-700">
-              Write your final reflection here. Explain what both visits taught
-              you about land connectedness, attention, place, and yourself.
-            </p>
-          </div>
         </section>
       )}
 
@@ -428,7 +413,10 @@ function GallerySection({
   playAudio,
 }: GallerySectionProps) {
   return (
-    <section className="mb-12 rounded-2xl bg-emerald-950/90 p-6 shadow-sm">
+    <section
+      className="mb-12 rounded-2xl p-6 shadow-sm"
+      style={{ backgroundColor: "rgba(16, 35, 24, 0.94)" }}
+    >
       <div className="mb-5">
         <p className="text-sm font-bold uppercase tracking-[0.25em] text-amber-300">
           {label}
